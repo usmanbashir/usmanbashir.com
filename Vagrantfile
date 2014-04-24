@@ -64,6 +64,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "build-essential"
     #chef.add_recipe "editor"
     chef.add_recipe "tmux"
+    chef.add_recipe "byobu"
     chef.add_recipe "heroku"
 
     # chef.add_role "web"
