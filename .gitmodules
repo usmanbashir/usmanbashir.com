@@ -1,0 +1,15 @@
+[submodule "server/provision/cookbooks/apt"]
+	path = server/provision/cookbooks/apt
+	url = https://github.com/opscode-cookbooks/apt.git
+[submodule "server/provision/cookbooks/vim"]
+	path = server/provision/cookbooks/vim
+	url = git@github.com:opscode-cookbooks/vim.git
+[submodule "server/provision/cookbooks/build-essential"]
+	path = server/provision/cookbooks/build-essential
+	url = git@github.com:opscode-cookbooks/build-essential.git
+[submodule "server/provision/cookbooks/tmux"]
+	path = server/provision/cookbooks/tmux
+	url = git@github.com:stevendanna/tmux.git
+[submodule "server/provision/cookbooks/heroku"]
+	path = server/provision/cookbooks/heroku
+	url = git@github.com:ichilton/chef_heroku.git
