@@ -1,3 +1,5 @@
+node.default['editor']['default'] = '/usr/bin/vim'
+
 bash "setup_git" do
     code <<-EOB
         apt-get -y install git-core
