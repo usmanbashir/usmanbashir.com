@@ -65,13 +65,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     #chef.add_recipe "editor"
     chef.add_recipe "tmux"
     chef.add_recipe "byobu"
-    chef.add_recipe "heroku"
+
+    chef.add_recipe "main"
 
     # chef.add_role "web"
 
     chef.custom_config_path = "Vagrantfile.chef"
   end
 
-  config.vm.provision "shell", inline: "apt-get -y install git-core"
   config.vm.provision "file", source: "~/.gitconfig", destination: "~/.gitconfig"
 end
