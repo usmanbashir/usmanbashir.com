@@ -1,0 +1,5 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Enable SSL validation of HTTPS requests.
+Chef::Config.ssl_verify_mode = :verify_peer
