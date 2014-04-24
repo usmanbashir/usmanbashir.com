@@ -20,3 +20,5 @@
 # Ignore foreman .env file
 .env
 newrelic.yml
+
+.vagrant/
