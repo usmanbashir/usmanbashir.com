@@ -13,3 +13,9 @@
 [submodule "server/provision/cookbooks/heroku"]
 	path = server/provision/cookbooks/heroku
 	url = git@github.com:ichilton/chef_heroku.git
+[submodule "server/provision/cookbooks/editor"]
+	path = server/provision/cookbooks/editor
+	url = git@github.com:sethvargo-cookbooks/editor.git
+[submodule "server/provision/cookbooks/magic_shell"]
+	path = server/provision/cookbooks/magic_shell
+	url = git@github.com:customink-webops/magic_shell.git
