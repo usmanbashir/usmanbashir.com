@@ -5,6 +5,9 @@ ruby '2.0.0'
 gem 'middleman', '~>3.1'
 gem 'middleman-blog', '~> 3.3'
 
+# For feed.xml.builder
+gem 'builder', '~> 3.0'
+
 gem 'rack-contrib', '~> 1.1'
 
 gem 'foreman'
