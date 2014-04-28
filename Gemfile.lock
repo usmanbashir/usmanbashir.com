@@ -117,9 +117,9 @@ PLATFORMS
 
 DEPENDENCIES
   foreman
-  middleman (~> 3.1.6)
-  middleman-blog
-  middleman-livereload (~> 3.1.0)
+  middleman (~> 3.1)
+  middleman-blog (~> 3.3)
+  middleman-livereload (~> 3.1)
   newrelic_rpm
   puma
   rack-contrib (~> 1.1)
