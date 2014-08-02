@@ -23,3 +23,7 @@ newrelic.yml
 
 .vagrant/
 /log
+
+
+# Ruby Gems
+.gems/
