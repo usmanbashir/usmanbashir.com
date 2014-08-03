@@ -2,8 +2,8 @@ source 'https://rubygems.org'
 
 ruby '2.1.2'
 
-gem 'middleman', '~>3.1'
-gem 'middleman-blog', '~> 3.3'
+gem 'middleman', '~>3.3'
+gem 'middleman-blog', '~> 3.5'
 
 # For feed.xml.builder
 gem 'builder', '~> 3.0'
@@ -14,7 +14,6 @@ gem 'foreman'
 gem 'puma'
 
 gem 'foundation', '~> 1.0.4'
-gem 'bourbon'
 
 gem 'newrelic_rpm'
 
@@ -24,8 +23,5 @@ end
 
 group :development do
     # Live-reloading plugin
-    gem 'middleman-livereload', '~> 3.1'
-
-    # For faster file watcher updates on Windows:
-    gem 'wdm', '~> 0.1.0', :platforms => [:mswin, :mingw]
+    gem 'middleman-livereload', '~> 3.3'
 end
