@@ -13,7 +13,8 @@ gem 'rack-contrib', '~> 1.1'
 gem 'foreman'
 gem 'puma'
 
-gem 'zurb-foundation', '~> 4.3'
+gem 'foundation', '~> 1.0.4'
+gem 'bourbon'
 
 gem 'newrelic_rpm'
 

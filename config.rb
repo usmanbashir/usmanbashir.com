@@ -3,6 +3,18 @@
 ###
 
 # Change Compass configuration
+compass_config do |config|
+  # Require any additional compass plugins here.
+  config.add_import_path "#{root}/bower_components/foundation/scss"
+
+  # Set this to the root of your project when deployed:
+  config.http_path          = "/"
+  config.css_dir            = "stylesheets"
+  config.sass_dir           = "stylesheets"
+  config.images_dir         = "images"
+  config.javascripts_dir    = "javascripts"
+end
+# Change Compass configuration
 # compass_config do |config|
 #   config.output_style = :compact
 # end
@@ -47,6 +59,13 @@ activate :livereload
 
 activate :directory_indexes
 
+# Add bower's directory to sprockets asset path
+after_configuration do
+  @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
+  sprockets.append_path File.join "#{root}", @bower_config["directory"]
+end
+
+
 set :build_dir, 'tmp'
 
 set :css_dir, 'stylesheets'
@@ -54,6 +73,10 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
+
+
+sprockets.import_asset 'modernizr/modernizr.js'
+
 
 # Build-specific configuration
 configure :build do

@@ -1,0 +1,20 @@
+{
+  "name": "usmanbashir.com",
+  "version": "1.0.0",
+  "homepage": "http://usmanbashir.com/",
+  "authors": [
+    "Usman Bashir <me@usmanbashir.com>"
+  ],
+  "description": "My personal website.",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.3.1"
+  }
+}
