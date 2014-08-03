@@ -11,9 +11,8 @@
     .intro {
         border-bottom: 1px dotted #ccc;
         margin-bottom: em-calc(35);
-    }
-    .intro * {
-        text-align: center;
+
+        h1, p { text-align: center; }
     }
 
     .who-am-i {
@@ -22,6 +21,7 @@
 
         #what-i-do {
             list-style: none; 
+            margin-left: 0;
             @include clearfix();
 
             li {

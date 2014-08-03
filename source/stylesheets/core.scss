@@ -1,6 +1,8 @@
 body { background: #f5f5f5; }
 body { background: #fff; }
 
+h1 { margin: em-calc(46.875) 0 em-calc(25) 0 !important; }
+
 header {
     &:before {
         background: #1ca261;
@@ -14,7 +16,7 @@ header {
 
     h2 {
         font-size: em-calc(22);
-        margin-top: em-calc(12);
+        margin-top: em-calc(16.5);
         text-transform: lowercase;
 
         a {
@@ -61,6 +63,7 @@ header {
         font-family: 'Source Sans Pro', 'Lucida Grande', Tahoma, Verdana, sans-serif;
         font-size: em-calc(20);
         font-weight: normal;
+        margin-bottom: em-calc(25) !important;
     }
 }
 
@@ -76,13 +79,13 @@ footer {
         &:hover { color: #eee; }
     }
 
-    ul { list-style: none; }
+    ul { list-style: none; margin-left: 0; }
 
     li { display: inline-block; }
 
     .social a {
         font-size: em-calc(28);
-        margin: 0 em-calc(6);
+        margin: 0 em-calc(10.5);
 
         &:hover { color: #fff; }
     }
