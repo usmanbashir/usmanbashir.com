@@ -1,0 +1,30 @@
+---
+pageable: true
+per_page: 10
+---
+<h1>recent notes</h1>
+<% if paginate && num_pages > 1 %>
+  <p>Page <%= page_number %> of <%= num_pages %></p>
+
+  <% if prev_page %>
+    <p><%= link_to 'Previous page', prev_page %></p>
+  <% end %>
+<% end %>
+
+<% notes = blog.articles.select { |article| article.metadata[:page]['type'] == 'notes' } %>
+
+<% notes.each_with_index do |post, i| %>
+  <!-- use article.summary(250) if you have Nokogiri available to show just
+       the first 250 characters -->
+  <%= post.body %>
+  <%= link_to post.date.strftime('%b %e'), post %>
+
+  <br>
+  <%= post.metadata.to_yaml %>
+<% end %>
+
+<% if paginate %>
+  <% if next_page %>
+    <p><%= link_to 'Next page', next_page %></p>
+  <% end %>
+<% end %>
