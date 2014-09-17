@@ -2,8 +2,9 @@ source 'https://rubygems.org'
 
 ruby '2.1.2'
 
-gem 'middleman', '~>3.3'
+gem 'middleman', '~> 3.3'
 gem 'middleman-blog', '~> 3.5'
+gem 'middleman-livereload', '~> 3.3'
 
 # For feed.xml.builder
 gem 'builder', '~> 3.0'
@@ -21,7 +22,3 @@ group :assets do
     gem 'therubyracer', '~> 0.12' unless RUBY_PLATFORM.match(/darwin|mswin/)
 end
 
-group :development do
-    # Live-reloading plugin
-    gem 'middleman-livereload', '~> 3.3'
-end

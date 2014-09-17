@@ -48,7 +48,9 @@ end
 # activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
-activate :livereload
+configure :development do
+  activate :livereload, :host => '192.168.1.104', :apply_js_live => true, :apply_css_live => true
+end
 
 # Methods defined in the helpers block are available in templates
 # helpers do
