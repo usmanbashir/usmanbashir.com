@@ -14,10 +14,13 @@ compass_config do |config|
   config.images_dir         = "images"
   config.javascripts_dir    = "javascripts"
 end
-# Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
+
+activate :blog do |blog|
+  blog.prefix               = "articles"
+  blog.permalink            = "/{year}/{month}/{day}/{title}.html"
+  blog.layout               = "article_layout"
+  blog.default_extension    = ".md"
+end
 
 ###
 # Page options, layouts, aliases and proxies
