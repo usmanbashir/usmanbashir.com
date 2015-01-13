@@ -1,4 +1,12 @@
-.work .project { margin-bottom: em-calc(100); }
+.work .project {
+  border-bottom: 1px dotted #bbb;
+  margin-bottom: em-calc(75);
+  padding-bottom: em-calc(75);
+}
+.work .haweee-app {
+  border: 0 none;
+  padding: 0;
+}
 
 .work .sift-app .intro { margin-top: em-calc(100); }
 .work .currrva-app .intro { margin-top: em-calc(100); }
