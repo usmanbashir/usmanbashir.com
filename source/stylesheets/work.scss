@@ -1,17 +1,18 @@
-.work .project {
-  .columns:first-child {
-    margin-top: em-calc(100);
+.work .project { margin-bottom: em-calc(100); }
 
-    img { margin-top: em-calc(-6); }
+.work .currrva-app .intro { margin-top: em-calc(100); }
+.work .haweee-app .intro { margin-top: em-calc(60); }
 
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+.work .project .intro {
+  img { margin-top: em-calc(-6); }
 
-      li { margin-bottom: em-calc(10); }
-      a { padding-left: em-calc(5); }
-    }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li { margin-bottom: em-calc(10); }
+    a { padding-left: em-calc(5); }
   }
 }
 
