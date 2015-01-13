@@ -5,6 +5,7 @@ ruby '2.1.2'
 gem 'middleman', '~> 3.3'
 gem 'middleman-blog', '~> 3.5'
 gem 'middleman-livereload', '~> 3.3'
+gem 'nokogiri', '~> 1.6.3.1'
 
 # For feed.xml.builder
 gem 'builder', '~> 3.0'

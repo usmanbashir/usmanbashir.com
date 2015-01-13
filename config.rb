@@ -15,12 +15,20 @@ compass_config do |config|
   config.javascripts_dir    = "javascripts"
 end
 
+Time.zone = "Asia/Riyadh"
+
 activate :blog do |blog|
   blog.prefix               = "articles"
   blog.permalink            = "/{year}/{month}/{day}/{title}.html"
   blog.layout               = "article_layout"
+  blog.paginate             = true
   blog.default_extension    = ".md"
+  blog.summary_generator    = Proc.new do |rendered, length, ellipsis|
+
+  end
 end
+
+page "articles/feed.xml", layout: false
 
 ###
 # Page options, layouts, aliases and proxies
