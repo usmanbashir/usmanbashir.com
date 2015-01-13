@@ -1,0 +1,29 @@
+.work .project {
+  .columns:first-child {
+    margin-top: em-calc(100);
+
+    img { margin-top: em-calc(-6); }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li { margin-bottom: em-calc(10); }
+      a { padding-left: em-calc(5); }
+    }
+  }
+}
+
+.work .more-work {
+  border: 1px solid #999;
+  display: block;
+  margin: em-calc(30) 0;
+  padding: em-calc(10) 0;
+  text-align: center;
+
+  &:hover {
+    background: #008CBA;
+    color: #fff;
+  }
+}
