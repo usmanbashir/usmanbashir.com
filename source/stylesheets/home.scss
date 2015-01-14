@@ -51,18 +51,27 @@
         }
     }
 
-    .work-and-reading {
+    .newsletter-and-reading {
         margin-top: em-calc(14);
 
-        p { border-bottom: 1px dotted #ccc; }
+        p {
+          border-bottom: 1px dotted #ccc;
+          margin-bottom: em-calc(15) !important;
+          // padding-bottom: em-calc(14);
+        }
 
-        .recent-work .columns {}
+        .newsletter .columns p {
+          border: 0;
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+        .newsletter .columns strong { text-transform: capitalize; }
 
         .currently-reading {
             .book {
                 @include clearfix();
                 line-height: em-calc(20);
-                padding-bottom: em-calc(6);
+                padding-bottom: em-calc(15);
 
                 img { float: left; padding-right: em-calc(10); }
                 span { display: block; }
@@ -74,3 +83,16 @@
 }
 
 .index footer { margin-top: em-calc(46); }
+
+#mc_embed_signup {
+  * {
+    font-family: 'Source Sans Pro', 'Lucida Grande', Tahoma, Verdana, sans-serif;
+    font-size: em-calc(20);
+    font-weight: normal;
+  }
+
+  margin-top: em-calc(25);
+
+  #mce-EMAIL { height: em-calc(40); }
+  #mc-embedded-subscribe { margin-top: em-calc(-4); }
+}
