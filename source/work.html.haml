@@ -21,7 +21,7 @@ title: Work - Usman Bashir
           Currrva allows players of soccer video games (e.g. EA FIFA franchise) to record their results against their friends. From the games played and scorelines, Currrva provides visualizations and graphs for the data provided including: playing form, goals conceded, clean sheets, unbeaten runs.
         %ul
           %li.fi-video
-            %a{ href: "#" }
+            %a{ href: "#", data: { reveal_id: "videoModal" } }
               Take a sneak peek
           %li.fi-web
             %a{ href: "http://www.currrva.com/" }
@@ -58,3 +58,10 @@ title: Work - Usman Bashir
 
     %a{ href: "https://www.behance.net/usman", class: "more-work" }
       checkout rest of my work on behance
+
+#videoModal.reveal-modal.medium{ data: { reveal: true } }
+  %h2
+    Currrva Sneak Peek
+  <iframe width="100%" height="600" src="//www.youtube.com/embed/nK_d786NJqk" frameborder="0" allowfullscreen></iframe>
+  %a{ class: "close-reveal-modal" }
+    &#215;
