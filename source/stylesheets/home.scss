@@ -95,4 +95,9 @@
 
   #mce-EMAIL { height: em-calc(40); }
   #mc-embedded-subscribe { margin-top: em-calc(-4); }
+
+  div.mce_inline_error {
+    font-weight: normal !important;
+    font-style: italic;
+  }
 }
