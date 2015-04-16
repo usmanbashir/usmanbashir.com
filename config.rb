@@ -15,12 +15,22 @@ compass_config do |config|
   config.javascripts_dir    = "javascripts"
 end
 
+Time.zone = "Asia/Riyadh"
+
 activate :blog do |blog|
   blog.prefix               = "articles"
-  blog.permalink            = "/{year}/{month}/{day}/{title}.html"
+  blog.permalink            = "{title}.html"
   blog.layout               = "article_layout"
+  blog.paginate             = true
   blog.default_extension    = ".md"
+  blog.summary_separator    = /(READMORE)/
+  blog.summary_length       = 250
 end
+
+# XML and RSS don't need a layout.
+page "*.xml", layout: false
+page "*.rss", layout: false
+
 
 ###
 # Page options, layouts, aliases and proxies
@@ -52,7 +62,12 @@ end
 
 # Reload the browser automatically whenever files change
 configure :development do
-  activate :livereload, :host => '192.168.1.104', :apply_js_live => true, :apply_css_live => true
+  activate :livereload,
+           :host => '192.168.1.123',
+           :apply_js_live => true,
+           :apply_css_live => true
+
+  config[:file_watcher_ignore] += [ /^.gems\// ]
 end
 
 # Methods defined in the helpers block are available in templates

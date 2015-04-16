@@ -2,7 +2,7 @@ body { background: #fff; }
 
 h1 { margin: em-calc(46.875) 0 em-calc(25) 0 !important; }
 
-header {
+body > header {
     &:before {
         background: #1ca261;
         content: "";
@@ -66,7 +66,7 @@ header {
     }
 }
 
-footer {
+body > footer {
     background: #333;
     color: #999;
     padding: 2em 0;

@@ -1,0 +1,63 @@
+---
+pageable: true
+per_page: 2
+---
+.row.content
+  .large-9.columns
+    - page_articles.each do |article|
+
+      %article{ itemscope: true, itemType: "http://schema.org/BlogPosting" }
+
+        .row
+          %header.large-12.columns
+            %h1{ itemprop: "headline" }
+              = link_to article.title, article
+
+        .row
+          %footer.large-4.columns
+            .row.tags
+              .large-12.columns
+                - if !article.tags.empty?
+                  %ul.inline-list
+                    - article.tags.each do |tag|
+                      %li
+                        = "##{tag}"
+            .row.date-time
+              .large-12.columns
+                %p
+                  %time{ itemprop: "datePublished", datetime: article.date.strftime('%Y-%m-%d %H:%M:%S%:z') }
+                    = article.date.strftime('%b %e, %Y')
+
+          .large-8.columns{ itemprop: "description" }
+            -# Auto generate article summery if one is not provided.
+            - if article.data[:summary]
+              %p
+                = article.data[:summary]
+            - else
+              = article.summary
+
+            = link_to 'continue reading &#8594;', article
+
+
+    -# Not Cool! :(
+    = partial "partials/pagination", :locals => { paginate: paginate, num_pages: num_pages, page_number: page_number, prev_page: prev_page, next_page: next_page}
+
+  %aside.large-3.columns.sidebar
+    .row.newsletter
+      .large-12.columns
+        %h3 Join My Newsletter
+        %p Why should you join my newsletter you ask?
+    .row.subscribe-via
+      .large-12.columns
+        %strong Subscribe
+        %ul
+          %li RSS
+    .row.categories
+      .large-12.columns
+        %strong Categories
+        %ul
+          %li Working..
+    .row.tags
+      .large-12.columns
+        %p.text-center
+          %a{ href: "#" } View All Tags
