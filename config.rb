@@ -25,6 +25,9 @@ activate :blog do |blog|
   blog.default_extension    = ".md"
   blog.summary_separator    = /(READMORE)/
   blog.summary_length       = 250
+
+  blog.tag_template         = "tag.html"
+  blog.taglink              = "tags/{tag}.html"
 end
 
 # XML and RSS don't need a layout.

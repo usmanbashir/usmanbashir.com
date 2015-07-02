@@ -1,0 +1,8 @@
+ul
+  - blog.tags.each do |tag, articles|
+    li
+      h5 = tag
+      ul
+        - articles.each do |article|
+          li
+            a href=article.url = article.title

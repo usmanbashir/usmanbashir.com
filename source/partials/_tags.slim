@@ -1,0 +1,4 @@
+ul
+  - blog.tags.each do |tag, articles|
+    li
+      = link_to tag, tag_path(tag)
