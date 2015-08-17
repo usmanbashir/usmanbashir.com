@@ -15,6 +15,14 @@ per_page: 2
 
         .row
           %footer.large-4.columns
+            .row.category
+              .large-12.columns
+                - if article.data.key?("category")
+                  %ul.inline-list
+                    %li
+                      = link_to article.data[:category], category_path(article.data[:category])
+                - else
+                  empt
             .row.tags
               .large-12.columns
                 - if !article.tags.empty?
@@ -57,6 +65,9 @@ per_page: 2
         %strong Categories
         %ul
           %li Working..
+        %hr
+        %p.text-center
+          = link_to "View All Categories", "/articles/categories"
     .row.tags
       .large-12.columns
         %strong Tags

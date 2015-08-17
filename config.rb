@@ -28,7 +28,25 @@ activate :blog do |blog|
 
   blog.tag_template         = "tag.html"
   blog.taglink              = "tags/{tag}.html"
+
+  blog.custom_collections   = {
+    category: {
+      link: "/categories/{category}.html",
+      template: '/category.html'
+    }
+  }
 end
+
+# In case, if multiple categories are needed.
+# Though, still needs testing.
+#
+# ready do
+#   sitemap.resources.group_by {|p| p.data["categories"].downcase.split(",").map(&:strip)
+#   }.each do |category, pages|
+#     proxy "/categories/#{category}.html", "category.html",
+#     :locals => { :category => category, :pages => pages }
+#   end
+# end
 
 # XML and RSS don't need a layout.
 page "*.xml", layout: false
