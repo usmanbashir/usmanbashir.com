@@ -1,8 +1,10 @@
-ul
-  - blog.tags.each do |tag, articles|
-    li
-      h5 = tag
-      ul
-        - articles.each do |article|
-          li
-            a href=article.url = article.title
+.row.content
+  .large-12.columns
+    h1
+      | Tags
+    ul
+      - blog.tags.each do |tag, articles|
+        li
+          = link_to tag, tag_path(tag)
+          em
+            = " (#{articles.count})"
