@@ -23,11 +23,7 @@
 
     padding: em-calc(10px) em-calc(16px);
 
-    // Just in case!
-    //
-    // transition: background-color .6s ease-in-out,
-    //             border-color .4s ease-in,
-    //             color .4s ease-in;
+    transition: background-color .2s, border-color .2s, color .2s;
 
     &:hover {
       background-color: rgba(67, 172, 106, 1);
