@@ -43,8 +43,17 @@ body > header {
             font-size: em-calc(14);
             font-family: 'Source Sans Pro', 'Lucida Grande', Tahoma, Verdana, sans-serif;
             font-weight: 600 !important;
+
+            transition: color .3s ease-in-out;
         }
     }
+}
+
+.about-me .nav-about-me,
+.work .nav-work,
+.articles .nav-articles,
+.contact-me .nav-contact-me {
+  a { color: #007BA0; }
 }
 
 .content {
