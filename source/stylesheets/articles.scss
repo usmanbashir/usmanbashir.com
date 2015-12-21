@@ -1,13 +1,60 @@
-.articles_index {
+.articles-list {
 
-  article footer {
-    border: 1px dotted #ccc;
-    border-left: 0;
-    border-right: 0;
+  margin-top: em-calc(46px);
+
+  article {
+    padding-bottom: em-calc(120px);
+
+    &:nth-last-child(-n+2) {
+      padding-bottom: em-calc(46px);
+    }
+  }
+
+  article header h1 {
+    font-size: em-calc(32px);
+
+    margin-top: 0 !important;
+    margin-bottom: em-calc(15px) !important;
+  }
+
+  article section a {
+    border: 1px solid #008CBA;
+    border-radius: em-calc(4px);
+
+    padding: em-calc(10px) em-calc(16px);
+
+    // Just in case!
+    //
+    // transition: background-color .6s ease-in-out,
+    //             border-color .4s ease-in,
+    //             color .4s ease-in;
+
+    &:hover {
+      background-color: rgba(67, 172, 106, 1);
+      border-color: rgba(67, 172, 106, 1);
+      color: #fff;
+    }
+  }
+
+  article aside {
+    border-left: 1px solid #eee;
+
+    ul {
+      margin-top: em-calc(10px);
+      margin-bottom: em-calc(10px);
+    }
 
     .row {
-      border-bottom: 1px dotted #ccc;
-      &:last-child { border: 0 }
+      border-bottom: 1px solid #eee;
+      &:last-child { border: 0; }
+    }
+
+    .tags ul { margin-left: 0; margin-right: 0; }
+    .tags li {
+      &:nth-child(1n+1)     { margin: 0 em-calc(5px) 0 0; }
+
+      a:after               { content: ","; }
+      &:last-child a:after  { content: "";  }
     }
   }
 
@@ -17,6 +64,7 @@
     padding-top: em-calc(10px);
   }
 
+  // Not sure what to do with the sidebar yet!
   .sidebar {
 
     border-left: 1px dotted #ccc;

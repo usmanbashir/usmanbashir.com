@@ -1,9 +1,9 @@
 ---
 pageable: true
-per_page: 2
+per_page: 5
 ---
-.row.content
-  .large-9.columns
+.row.content.articles-list
+  .large-12.columns
     - page_articles.each do |article|
 
       %article{ itemscope: true, itemType: "http://schema.org/BlogPosting" }
@@ -14,29 +14,7 @@ per_page: 2
               = link_to article.title, article
 
         .row
-          %footer.large-4.columns
-            .row.category
-              .large-12.columns
-                - if article.data.key?("category")
-                  %ul.inline-list
-                    %li
-                      = link_to article.data[:category], category_path(article.data[:category])
-                - else
-                  empt
-            .row.tags
-              .large-12.columns
-                - if !article.tags.empty?
-                  %ul.inline-list
-                    - article.tags.each do |tag|
-                      %li
-                        = link_to "##{tag}", tag_path(tag)
-            .row.date-time
-              .large-12.columns
-                %p
-                  %time{ itemprop: "datePublished", datetime: article.date.strftime('%Y-%m-%d %H:%M:%S%:z') }
-                    = article.date.strftime('%b %e, %Y')
-
-          .large-8.columns{ itemprop: "description" }
+          %section.main.large-9.columns{ itemprop: "description" }
             -# Auto generate article summery if one is not provided.
             - if article.data[:summary]
               %p
@@ -46,11 +24,34 @@ per_page: 2
 
             = link_to 'continue reading &#8594;', article
 
+          %aside.large-3.columns
+            .row.date-time
+              .large-12.columns
+                %ul.inline-list
+                  %li
+                    %time{ itemprop: "datePublished", datetime: article.date.strftime('%Y-%m-%d %H:%M:%S%:z') }
+                      = article.date.strftime('%B %e, %Y')
+            - if article.data.key?("category")
+              .row.category
+                .large-12.columns
+                  %ul.inline-list
+                    %li
+                      = link_to article.data[:category], category_path(article.data[:category])
+            - if !article.tags.empty?
+              .row.tags
+                .large-12.columns
+                  %ul.inline-list
+                    - article.tags.each do |tag|
+                      %li
+                        = link_to "##{tag}", tag_path(tag)
+
 
     -# Not Cool! :(
     = partial "partials/pagination", :locals => { paginate: paginate, num_pages: num_pages, page_number: page_number, prev_page: prev_page, next_page: next_page}
 
-  %aside.large-3.columns.sidebar
+-# Not sure what to do with the sidebar yet!
+
+  %aside.large-3.columns.sidebar.hide
     .row.newsletter
       .large-12.columns
         %h3 Join My Newsletter
