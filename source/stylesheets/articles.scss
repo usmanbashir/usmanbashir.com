@@ -17,19 +17,9 @@
     margin-bottom: em-calc(15px) !important;
   }
 
-  article section a {
-    border: 1px solid #008CBA;
-    border-radius: em-calc(4px);
-
-    padding: em-calc(10px) em-calc(16px);
-
-    transition: background-color .2s, border-color .2s, color .2s;
-
-    &:hover {
-      background-color: rgba(67, 172, 106, 1);
-      border-color: rgba(67, 172, 106, 1);
-      color: #fff;
-    }
+  article section a:hover {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: em-calc(4px);
   }
 
   article aside {
