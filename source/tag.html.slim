@@ -3,7 +3,7 @@ pageable: true
 per_page: 10
 ---
 .row.content
-  .large-12.columns
+  .large-8.columns
     h1
       | Articles tagged 
       = tagname
@@ -31,3 +31,4 @@ per_page: 10
       - if next_page
         p
           = link_to 'Next page', next_page
+  = partial "partials/sidebar"

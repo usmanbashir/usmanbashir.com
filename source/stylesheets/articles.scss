@@ -83,22 +83,64 @@
     }
   }
 
-  // Not sure what to do with the sidebar yet!
+}
+
+.articles_categories,
+.articles_tags {
+
   .sidebar {
 
     border-left: 1px dotted #ccc;
     border-right: 1px dotted #ccc;
 
-    .row {
+    margin-bottom: em-calc(46px);
+
+    .newsletter,
+    .subscribe-via,
+    .categories,
+    .tags {
       border-bottom: 1px dotted #ccc;
       margin-bottom: em-calc(15px);
-
-      &:last-child {
-        border: 0;
-        min-height: 400px;
-      }
     }
 
+    .newsletter {
+      padding-top: em-calc(25px);
+
+      small { font-style: italic; }
+    }
+
+    .tags { border: 0; }
+
   }
+
 }
 
+#mc_mini_embed_signup {
+  * {
+    font-family: 'Source Sans Pro', 'Lucida Grande', Tahoma, Verdana, sans-serif;
+    font-size: em-calc(20);
+    font-weight: normal;
+  }
+
+  margin-top: em-calc(-10px);
+
+  #mce-EMAIL { height: em-calc(40); }
+  #mc-embedded-subscribe { margin-top: em-calc(-4); }
+
+  div.mce_inline_error {
+    font-weight: normal !important;
+    margin-top: em-calc(-10px);
+    padding-bottom: em-calc(15px);
+  }
+
+  #mce-responses * { margin-top: em-calc(15px); }
+
+  div.mce_inline_error, #mce-responses * {
+    background: none;
+
+    font-size: em-calc(16px);
+    font-style: italic;
+  }
+
+  #mc-embedded-subscribe { margin-bottom: 0; }
+}

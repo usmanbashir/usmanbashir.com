@@ -1,5 +1,5 @@
 .row.content
-  .large-12.columns
+  .large-8.columns
     h1
       | Tags
     ul
@@ -8,3 +8,4 @@
           = link_to tag, tag_path(tag)
           em
             = " (#{articles.count})"
+  = partial "partials/sidebar"
