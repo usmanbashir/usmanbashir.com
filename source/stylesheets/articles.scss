@@ -10,6 +10,12 @@
     }
   }
 
+  article header time {
+    color: #999;
+    font-size: em-calc(18px);
+    text-rendering: optimizeLegibility;
+  }
+
   article header h1 {
     font-size: em-calc(32px);
 

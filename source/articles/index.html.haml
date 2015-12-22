@@ -10,6 +10,8 @@ per_page: 5
 
         .row
           %header.large-12.columns
+            %time{ itemprop: "datePublished", datetime: article.date.strftime('%Y-%m-%d %H:%M:%S%:z') }
+              = article.date.strftime('%B %e, %Y')
             %h1{ itemprop: "headline" }
               = link_to article.title, article
 
@@ -25,12 +27,6 @@ per_page: 5
             = link_to 'continue reading &#8594;', article
 
           %aside.large-3.columns
-            .row.date-time
-              .large-12.columns
-                %ul.inline-list
-                  %li
-                    %time{ itemprop: "datePublished", datetime: article.date.strftime('%Y-%m-%d %H:%M:%S%:z') }
-                      = article.date.strftime('%B %e, %Y')
             - if article.data.key?("category")
               .row.category
                 .large-12.columns
