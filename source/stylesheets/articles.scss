@@ -51,12 +51,41 @@
       &:last-child { border: 0; }
     }
 
-    .tags ul { margin-left: 0; margin-right: 0; }
-    .tags li {
-      &:nth-child(1n+1)     { margin: 0 em-calc(5px) 0 0; }
+    .category a:before,
+    .tags li:nth-child(1) a:before {
+      font-family: "foundation-icons";
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      display: inline-block;
+      text-decoration: inherit;
 
-      a:after               { content: ","; }
-      &:last-child a:after  { content: "";  }
+      color: #555;
+      padding-right: em-calc(8px);
+      width: em-calc(20px);
+    }
+
+    // Category Icon
+    .category a:before { content: "\f168"; }
+
+    // Add/Remove Padding & Margin to properly align multiline tags.
+    .tags ul { margin-left: 0; padding-left: em-calc(20px); }
+    .tags li {
+
+      &:nth-child(1) a {
+        margin-left: em-calc(-20px);
+
+        // Tag Icon
+        &:before { content: "\f19d"; }
+      }
+
+      &:nth-child(1n+1)       { margin: 0 em-calc(5px) 0 0; }
+
+      a:after                 { content: ","; }
+      &:last-child a:after    { content: "";  }
     }
   }
 
