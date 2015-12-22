@@ -2,13 +2,7 @@
 
   margin-top: em-calc(46px);
 
-  article {
-    padding-bottom: em-calc(120px);
-
-    &:nth-last-child(-n+2) {
-      padding-bottom: em-calc(46px);
-    }
-  }
+  article { padding-bottom: em-calc(120px); }
 
   article header time {
     color: #999;
@@ -90,9 +84,13 @@
   }
 
   .pagination {
-    border-top: 1px dotted #ccc;
-    margin-top: em-calc(30px);
-    padding-top: em-calc(10px);
+    margin-bottom:  em-calc(46px);
+    text-align: center;
+
+    .columns {
+      border-top: 1px dotted #bbb;
+      padding-top: em-calc(20px);
+    }
   }
 
   // Not sure what to do with the sidebar yet!

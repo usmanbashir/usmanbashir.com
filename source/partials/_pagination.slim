@@ -1,17 +1,12 @@
 .row.pagination
-  .large-8.columns
+  .large-8.columns.large-centered
     - if paginate && num_pages > 1
-      p
-        | Page 
-        = page_number
-        |  of 
-        = num_pages
-  .large-4.columns
-    - if paginate && num_pages > 1
-      ul.inline-list.right
-        - if prev_page
-          li
-            = link_to '< Previous Page', prev_page
-        - if next_page
-          li
-            = link_to 'Next Page >', next_page
+      - if prev_page
+        = link_to '← Newer Posts', prev_page
+        | &nbsp;&nbsp;&nbsp;
+      = page_number
+      |  / 
+      = num_pages
+      - if next_page
+        | &nbsp;&nbsp;&nbsp;
+        = link_to 'Older Posts →', next_page
