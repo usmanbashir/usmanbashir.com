@@ -90,6 +90,24 @@
 .articles_categories,
 .articles_tags {
 
+  .articles-list {
+    margin-top: 0;
+
+    article { padding-bottom: em-calc(60px); }
+
+    article header h4 {
+      margin-bottom: em-calc(0px) !important;
+    }
+
+    article header time {
+      color: #999;
+      display: block;
+      font-size: em-calc(14px);
+      margin-bottom: em-calc(5px) !important;
+      text-rendering: optimizeLegibility;
+    }
+  }
+
   .sidebar {
 
     border-left: 1px dotted #ccc;
