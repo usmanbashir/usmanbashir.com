@@ -4,12 +4,6 @@
 
   article { padding-bottom: em-calc(120px); }
 
-  article header time {
-    color: #999;
-    font-size: em-calc(18px);
-    text-rendering: optimizeLegibility;
-  }
-
   article header h1 {
     font-size: em-calc(32px);
 
@@ -24,6 +18,7 @@
 
   article aside {
     border-left: 1px solid #eee;
+    margin-top: em-calc(20px);
 
     ul {
       margin-top: em-calc(10px);
@@ -35,6 +30,7 @@
       &:last-child { border: 0; }
     }
 
+    .date-published time:before,
     .category a:before,
     .tags li:nth-child(1) a:before {
       font-family: "foundation-icons";
@@ -50,6 +46,12 @@
       color: #555;
       padding-right: em-calc(8px);
       width: em-calc(20px);
+    }
+
+    // Published Date Icon
+    .date-published time:before {
+      content: "\f12b";
+      margin-right: em-calc(-5px);
     }
 
     // Category Icon
