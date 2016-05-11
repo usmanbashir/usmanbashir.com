@@ -7,21 +7,27 @@ aside.large-3.columns.sidebar
         small — I promise, not to spam you.
   .row.subscribe-via
     .large-12.columns
-      strong Subscribe
+      p
+        strong Subscribe
       ul
         li RSS
   .row.categories
     .large-12.columns
-      strong Categories
+      p
+        strong Categories
+
       ul
-        li Working..
-      hr
-      p.text-center
-        = link_to "View All Categories", "/articles/categories"
+        - sitemap.resources.group_by {|p| p.data["category"]}.reject{|k| k.nil?}.sort.each do |category, pages|
+          li
+            = link_to category_path(category) do
+              .row
+                .small-10.columns
+                  = category
+                .small-2.columns
+                  = pages.count
   .row.tags
     .large-12.columns
-      strong Tags
+      p
+        strong Tags
+
       = partial "partials/tags"
-      hr
-      p.text-center
-        = link_to "View All Tags", "/articles/tags"

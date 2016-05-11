@@ -3,8 +3,10 @@
     h1
       | Categories
     ul
-      - sitemap.resources.group_by {|p| p.data["category"]}.reject{|k| k.nil?}.each do |category, pages|
+      - sitemap.resources.group_by {|p| p.data["category"]}.reject{|k| k.nil?}.sort.each do |category, pages|
         li
-          h5 = link_to category, category_path(category)
+          h5
+            = link_to category, category_path(category)
+            sup
+              = " (#{pages.count})"
 
-  = partial "partials/sidebar"

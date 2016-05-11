@@ -1,4 +1,7 @@
 ul
-  - blog.tags.each do |tag, articles|
+  - blog.tags.sort.each do |tag, articles|
     li
-      = link_to tag, tag_path(tag)
+      = link_to tag_path(tag) do
+        = tag
+        sup
+          = " (#{articles.count})"

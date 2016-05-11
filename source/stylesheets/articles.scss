@@ -114,18 +114,26 @@
   }
 
   .sidebar {
-
-    border-left: 1px dotted #ccc;
-    border-right: 1px dotted #ccc;
-
     margin-bottom: em-calc(46px);
 
     .newsletter,
     .subscribe-via,
     .categories,
     .tags {
-      border-bottom: 1px dotted #ccc;
-      margin-bottom: em-calc(15px);
+      p {
+        border-bottom: 1px dotted #ccc;
+        margin-bottom: em-calc(15) !important;
+        text-transform: lowercase;
+        margin-top: em-calc(14);
+      }
+    }
+
+    .subscribe-via p { margin-top: 0; }
+
+    .categories ul,
+    .tags ul {
+      list-style: none;
+      margin-left: 0;
     }
 
     .newsletter {
@@ -134,7 +142,16 @@
       small { font-style: italic; }
     }
 
-    .tags { border: 0; }
+    .tags li {
+      display: inline-block;
+      text-align: center;
+      width: 50%;
+
+      sup {
+        color: #999;
+        font-style: italic;
+      }
+    }
 
   }
 

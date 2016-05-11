@@ -3,9 +3,8 @@
     h1
       | Tags
     ul
-      - blog.tags.each do |tag, articles|
+      - blog.tags.sort.each do |tag, articles|
         li
           = link_to tag, tag_path(tag)
-          em
+          sup
             = " (#{articles.count})"
-  = partial "partials/sidebar"
