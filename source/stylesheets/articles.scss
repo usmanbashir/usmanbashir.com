@@ -93,18 +93,23 @@
   .articles-list {
     margin-top: 0;
 
-    article { padding-bottom: em-calc(60px); }
-
-    article header h4 {
-      margin-bottom: em-calc(0px) !important;
+    .article-types {
+      text-align: center;
+      margin-bottom: em-calc(46px) !important;
     }
 
-    article header time {
-      color: #999;
-      display: block;
-      font-size: em-calc(14px);
-      margin-bottom: em-calc(5px) !important;
-      text-rendering: optimizeLegibility;
+    article { padding-bottom: em-calc(60px); }
+
+    article header {
+      h1 { margin-bottom: em-calc(0px) !important; }
+
+      time {
+        color: #999;
+        display: block;
+        font-size: em-calc(14px);
+        margin-bottom: em-calc(5px) !important;
+        text-rendering: optimizeLegibility;
+      }
     }
   }
 

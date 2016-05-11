@@ -3,47 +3,33 @@ pageable: true
 per_page: 10
 ---
 .row.content.articles-list
-  .large-9.columns
-    h1
-      = tagname
+  .large-12.columns
+    h1.article-types
+      = "#{tagname} tag"
 
-    // TODO: Need To Rewrite Pagination
-    - if paginate && num_pages > 1
-      p
-        Page
-        = page_number
-        of
-        = num_pages
+  .row
+    .large-9.columns
+      - page_articles.each do |article|
 
-      - if prev_page
-        p
-          = link_to 'Previous page', prev_page
+        article
+          .row
+            .large-12.columns
+              .row
+                header.large-12.columns
+                  h1
+                    = link_to article.title, article
+                  time
+                    = article.date.strftime('%B %e, %Y')
 
-    - page_articles.each do |article|
+              .row
+                section.main.large-12.columns
+                  -# Auto generate article summery if one is not provided.
+                  - if article.data[:summary]
+                    p
+                      = article.data[:summary]
+                  - else
+                    = article.summary
 
-      article
-        .row
-          .large-12.columns
-            .row
-              header.large-12.columns
-                h4
-                  = link_to article.title, article
-                time
-                  = article.date.strftime('%B %e, %Y')
+                  = link_to 'continue reading &#8594;', article
 
-            .row
-              section.main.large-12.columns
-                -# Auto generate article summery if one is not provided.
-                - if article.data[:summary]
-                  p
-                    = article.data[:summary]
-                - else
-                  = article.summary
-
-                = link_to 'continue reading &#8594;', article
-
-    - if paginate
-      - if next_page
-        p
-          = link_to 'Next page', next_page
-  = partial "partials/sidebar"
+    = partial "partials/sidebar"
