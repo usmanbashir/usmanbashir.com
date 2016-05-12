@@ -151,6 +151,36 @@
 
 }
 
+article.post header {
+  h1 { margin-bottom: em-calc(5px) !important; }
+
+  p, a { color: #999; }
+
+  p {
+    font-style: italic;
+    font-size: em-calc(18px);
+    text-transform: lowercase;
+  }
+
+  a { text-decoration: underline; }
+}
+
+article.post footer {
+  p, a { color: #999 }
+
+  p {
+    font-style: italic;
+    font-size: em-calc(18px);
+    text-transform: lowercase;
+  }
+
+  a {
+    text-decoration: underline;
+    &:after { content: ","; }
+    &:last-child:after { content: ""; }
+  }
+}
+
 #mc_mini_embed_signup {
   * {
     font-family: 'Source Sans Pro', 'Lucida Grande', Tahoma, Verdana, sans-serif;

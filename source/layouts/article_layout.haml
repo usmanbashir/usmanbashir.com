@@ -1,7 +1,24 @@
 = wrap_layout :layout do
-  %article
-    .row.content
-      .large-10.large-centered.columns
-        %h1
-          = current_article.title
-        = yield
+  %article.row.content.post{ itemscope: true, itemType: "http://schema.org/BlogPosting" }
+    .large-10.large-centered.columns
+      .row
+        %header.large-12.columns
+          %h1{ itemprop: "headline" }
+            = current_article.title
+          - category = current_article.data["category"]
+          %p
+            Posted 
+            - if category
+              in
+              = link_to category, category_path(category)
+            on 
+            %time{ itemprop: "datePublished", datetime: current_article.date.strftime('%Y-%m-%d %H:%M:%S%:z') }
+              = current_article.date.strftime('%B %e, %Y')
+      = yield
+      - if current_article.tags.any?
+        .row
+          %footer.large-12.columns
+            %p
+              tagged as 
+              - current_article.tags.sort.each do |tag|
+                = link_to tag, tag_path(tag)
