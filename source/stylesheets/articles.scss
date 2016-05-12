@@ -176,6 +176,7 @@ article.post footer {
 
   a {
     text-decoration: underline;
+
     &:after { content: ","; }
     &:last-child:after { content: ""; }
   }
