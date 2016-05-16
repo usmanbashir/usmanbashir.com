@@ -116,7 +116,29 @@
   .sidebar {
     margin-bottom: em-calc(46px);
 
-    .newsletter,
+    // Get these guys ready for their icons.
+    .subscribe-via p,
+    .subscribe-via li,
+    .categories p,
+    .tags p {
+      &:before {
+        font-family: "foundation-icons";
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        text-decoration: inherit;
+
+        color: #555;
+        padding-right: em-calc(8px);
+        width: em-calc(20px);
+      }
+    }
+
+    // Section Headings
     .subscribe-via,
     .categories,
     .tags {
@@ -128,8 +150,31 @@
       }
     }
 
-    .subscribe-via p { margin-top: 0; }
+    // Section Headings Icons
+    .subscribe-via p:before { content: "\f11f"; }
+    .categories p:before { content: "\f168"; }
+    .tags p:before { content: "\f19d"; }
 
+    .subscribe-via {
+      p { margin-top: 0; }
+
+      span {
+        display: block;
+        margin-bottom: em-calc(15px);
+        text-transform: lowercase;
+      }
+
+      li {
+        display: inline-block;
+        text-align: left;
+        width: 50%;
+
+        &:first-child:before { content: "\f1aa"; } // RSS Icon
+        &:last-child:before { content: "\f16d"; }  // Email Icon
+      }
+    }
+
+    .subscribe-via ul,
     .categories ul,
     .tags ul {
       list-style: none;

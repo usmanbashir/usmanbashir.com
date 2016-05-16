@@ -3,8 +3,13 @@ aside.large-3.columns.sidebar
     .large-12.columns
       p
         strong Subscribe
+      span
+        | Enjoy my writing? Get notified when I create new content.
       ul
-        li RSS
+        li
+          = link_to "RSS", "/rss.xml"
+        li
+          = link_to "Email", "/newsletter"
   .row.categories
     .large-12.columns
       p
