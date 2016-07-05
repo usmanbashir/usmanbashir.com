@@ -96,6 +96,8 @@ body > footer {
         margin: 0 em-calc(10.5);
 
         &:hover { color: #fff; }
+
+        span { display: none; }
     }
 
     .fi-social-behance { color: #0e87f7; }
