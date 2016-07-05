@@ -84,7 +84,7 @@ page "*.rss", layout: false
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload,
-           :host => '192.168.1.123',
+           :host => '0.0.0.0',
            :apply_js_live => true,
            :apply_css_live => true
 
