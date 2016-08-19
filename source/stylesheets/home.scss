@@ -92,21 +92,3 @@
 }
 
 .index footer { margin-top: em-calc(46); }
-
-#mc_embed_signup {
-  * {
-    font-family: 'Source Sans Pro', 'Lucida Grande', Tahoma, Verdana, sans-serif;
-    font-size: em-calc(20);
-    font-weight: normal;
-  }
-
-  margin-top: em-calc(25);
-
-  #mce-EMAIL { height: em-calc(40); }
-  #mc-embedded-subscribe { margin-top: em-calc(-4); }
-
-  div.mce_inline_error {
-    font-weight: normal !important;
-    font-style: italic;
-  }
-}
