@@ -1,5 +1,6 @@
 ---
 title: Usman Bashir, your galactic alien friend!
+per_page: 6
 ---
 .row.content
   .large-12.columns
@@ -9,24 +10,13 @@ title: Usman Bashir, your galactic alien friend!
           %h1
             Hello, I'm Usman. I build products.
           %p
-            I’m here to bring your mobile and web projects to life.
+            I’m a full-stack software developer, ux designer and an entrepreneur.
     .row
       .large-12.columns.who-am-i
         .row.short-bio
-          .large-4.columns
+          .large-12.columns
             %p
-              I'm a full-stack software developer, a UX designer and an entrepreneur based in Saudi Arabia.
-          .large-4.columns
-            %p
-              I've been programming since I was 13 years old &amp; creating meaningful user experiences for over a decade.
-          .large-4.columns
-            %p
-              While you're here, checkout some of
-              = link_to "my work", "/work"
-              or learn more
-              = link_to "about me", "/about-me"
-              and see what
-              = link_to "I'm up to.", "/articles"
+              I enjoy solving problems holistically using my multidisciplinary background to help businesses, agencies and startups grow. I've been involved in the industry for over a decade, bringing both large and small websites and products to life, that work on any type and size of device.
         .row
           .large-12.columns
             %ul#what-i-do
@@ -42,19 +32,25 @@ title: Usman Bashir, your galactic alien friend!
                 %img{ src: "images/icons/project_management.png", height: "110px" }
                 %strong
                   Project Management
-    .row.newsletter-and-reading
-      .large-8.columns.newsletter
-        %p
-          %strong Subscribe to my Newsletter
+    .row.articles-and-reading
+      .large-8.columns.recent-articles
+        %p.heading
+          %strong my recent articles
         .row
-          .large-12.columns
+          .large-6.columns.list
+            - page_articles.each do |article|
+              .item
+                = link_to article.title, article
+          .large-6.columns.email-list
             %p
-              I'll be sending out a irregular newsletter soon, called 
-              %strong "Bits &amp; Bytes".
-              Each issue will feature a roundup of my blog posts and links, as well as exclusive newsletter only content. In addition, I'll be sharing details of new products and projects I'll be working on.
-            = partial "newsletter"
+              Want new articles before they get published? I usually send out these articles and other updates to my private email list first.
+            %p
+              Become a friend and
+              %strong
+                = link_to "join my private email list.", "/"
+
       .large-4.columns.currently-reading
-        %p
+        %p.heading
           %strong Currently Reading
         .book
           %a{ href: "https://www.goodreads.com/book/show/414999.Childhood_s_End" }

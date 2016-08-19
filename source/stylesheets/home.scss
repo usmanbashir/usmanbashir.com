@@ -17,7 +17,10 @@
 
     .who-am-i {
 
-        .short-bio { margin-bottom: em-calc(14); }
+        .short-bio {
+          margin-bottom: em-calc(14);
+          text-align: center;
+        }
 
         #what-i-do {
             list-style: none; 
@@ -51,25 +54,31 @@
         }
     }
 
-    .newsletter-and-reading {
+    .articles-and-reading {
         margin-top: em-calc(14);
 
-        p {
+        p.heading {
           border-bottom: 1px dotted #ccc;
-          margin-bottom: em-calc(15) !important;
-          // padding-bottom: em-calc(14);
+          margin-bottom: em-calc(20) !important;
         }
 
-        .newsletter .columns p {
-          border: 0;
-          margin: 0 !important;
-          padding: 0 !important;
+        .recent-articles {
+          .list { border-right: 1px dotted #ccc; }
+
+          .item {
+            font-size: em-calc(18);
+            line-height: em-calc(20);
+            padding-bottom: em-calc(22);
+            text-transform: capitalize;
+
+            &:last-child { padding: 0; }
+          }
         }
-        .newsletter .columns strong { text-transform: capitalize; }
 
         .currently-reading {
             .book {
                 @include clearfix();
+                font-size: em-calc(18);
                 line-height: em-calc(20);
                 padding-bottom: em-calc(15);
 
